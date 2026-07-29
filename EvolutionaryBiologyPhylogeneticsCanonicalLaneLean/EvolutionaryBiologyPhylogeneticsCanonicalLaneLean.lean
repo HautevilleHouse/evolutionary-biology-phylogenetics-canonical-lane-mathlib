@@ -1,0 +1,18 @@
+import canonicalLaneMathlib.AdmissibleClass
+import EvolutionaryBiologyPhylogeneticsCanonicalLaneLean.SequenceAlignment
+import EvolutionaryBiologyPhylogeneticsCanonicalLaneLean.PhylogeneticTree
+import EvolutionaryBiologyPhylogeneticsCanonicalLaneLean.HardyWeinbergEquilibrium
+import EvolutionaryBiologyPhylogeneticsCanonicalLaneLean.MolecularClock
+import EvolutionaryBiologyPhylogeneticsCanonicalLaneLean.PopulationGenetics
+
+namespace HautevilleHouse
+namespace EvolutionaryBiologyPhylogeneticsCanonicalLaneLean
+
+def ConstrainedPhylogeneticsClosure (A : AdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem constrained_phylogenetics_endgame (A : AdmissibleClass) : ConstrainedPhylogeneticsClosure A := by
+  exact And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end EvolutionaryBiologyPhylogeneticsCanonicalLaneLean
+end HautevilleHouse
